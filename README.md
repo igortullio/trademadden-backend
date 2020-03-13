@@ -1,28 +1,31 @@
-# Adonis API application
+# Trade Madden - Backend
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
-
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+This is the backend for the application: ```git_url_front```
 
 ## Setup
 
-Use the adonis command to install the blueprint
+### Install dependencies
 
 ```bash
-adonis new yardstick --api-only
+yarn
+``` 
+
+or 
+
+```bash
+npm install
 ```
-
-or manually clone the repo and then run `npm install`.
-
 
 ### Migrations
 
 Run the following command to run startup migrations.
 
-```js
+```bash
 adonis migration:run
+```
+
+### Run project
+
+```bash
+adonis server --dev
 ```
