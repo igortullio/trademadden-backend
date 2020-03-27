@@ -8,10 +8,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-[Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-[Node.js](https://nodejs.org/en/download/) >= 8.0.0
-[Npm](https://nodejs.org/en/download/) >= 3.0.0 or [Yarn](https://classic.yarnpkg.com/en/docs/install/)
-[Adonis](https://adonisjs.com/docs/4.1/installation)
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+- [Node.js](https://nodejs.org/en/download/) >= 8.0.0
+
+- [Npm](https://nodejs.org/en/download/) >= 3.0.0 or [Yarn](https://classic.yarnpkg.com/en/docs/install/)
+
+- [Adonis](https://adonisjs.com/docs/4.1/installation)
 
 ### Installing
 
