@@ -1,6 +1,6 @@
 # Trade Madden - Backend
 
-This is the backend for the application: `git_url_front`
+This is the backend for the application: `https://github.com/igortullio/trademadden-mobile`
 
 ## Getting Started
 
