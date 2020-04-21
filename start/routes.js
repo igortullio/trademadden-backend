@@ -1,21 +1,32 @@
-'use strict'
+'use strict';
 
-/*
-|--------------------------------------------------------------------------
-| Routes
-|--------------------------------------------------------------------------
-|
-| Http routes are entry points to your web application. You can create
-| routes for different URLs and bind Controller actions to them.
-|
-| A complete guide on routing is available here.
-| http://adonisjs.com/docs/4.1/routing
-|
-*/
+const Route = use('Route');
 
-/** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
+Route.post('/users', 'UserController.store').validator('User/Store');
 
-Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
-})
+Route.post('/sessions/token', 'SessionController.token').validator(
+  'Session/Store'
+);
+Route.post('/sessions/refresh-token', 'SessionController.refreshToken');
+
+Route.post('/forgot-password', 'ForgotPasswordController.store');
+Route.put('/forgot-password', 'ForgotPasswordController.update');
+
+Route.get('/files/:id', 'FileController.show');
+Route.post('/files', 'FileController.store');
+
+Route.group(() => {
+  Route.put('/users', 'UserController.update').validator('User/Update');
+  Route.delete('/users', 'UserController.destroy');
+
+  Route.get('/league', 'LeagueController.index');
+  Route.post('/league', 'LeagueController.store').validator('League/Store');
+  Route.put('/league/:id', 'LeagueController.update').validator(
+    'League/Update'
+  );
+  Route.delete('/league/:id', 'LeagueController.destroy');
+
+  Route.post('/user-league', 'UserLeagueController.store').validator(
+    'UserLeague/Store'
+  );
+}).middleware('auth');
